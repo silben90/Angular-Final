@@ -10,3 +10,12 @@
     margin-top: 5px;
    
     }
+    .blandas{
+       flex-direction: column;
+    }
+
+    .duras{
+      flex-direction: column;
+      align-content: center
+      ;
+   }
