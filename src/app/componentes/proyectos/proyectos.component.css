@@ -1,4 +1,4 @@
-.experiencia{
+.proyectos{
     background-color: rgb(206, 214, 214);
     border-width: 1px;
     border-style:solid; 
@@ -8,7 +8,4 @@
     padding-left: 3%;
     margin-top: 5px;
 
- }
- .caja{
-     flex-direction: row;
  }
