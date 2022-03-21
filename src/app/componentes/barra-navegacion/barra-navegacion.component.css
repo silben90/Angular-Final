@@ -1,0 +1,22 @@
+
+.navegacion{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkcyan;
+}
+
+.logo{
+    float:left
+}
+.mail{
+    float:right
+}
+.github{
+    float:right
+}
+.linkedin{
+    float:right
+}
+
+.login{
+    float:right
+}
