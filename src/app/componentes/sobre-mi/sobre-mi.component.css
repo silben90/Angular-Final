@@ -2,9 +2,13 @@
 .banner{
     background-image: url("src\assets\png\fondo gris.png");
     height: 8cm;
+    
 }
 
-#sobre_mi{
+#imagen{
+    border-radius: 200px;
+}
+.sobre_mi{
     background-color: teal;
     padding-left: 3%;
 
