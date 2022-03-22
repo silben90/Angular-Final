@@ -6,12 +6,19 @@
     border-radius: 20px;
     align-items: center;
     padding-left: 3%;
+    line-height: 50px;
+    vertical-align: middle;
+  
 }
 
 .primera{
     flex-direction: row;
+    display: flex;
 }
 
 .segunda {
+    margin-top: 10px;
     flex-direction: row;
+    display: flex;
+    margin-bottom: 5px;
 }
