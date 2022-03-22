@@ -1,4 +1,4 @@
-.estudios_realizados{
+.estudios{
     background-color: rgb(206, 214, 214);
     border-width: 1px;
     border-style:solid; 
@@ -6,11 +6,12 @@
     border-radius: 20px;
     align-items: center;
     padding-left: 3%;
-
 }
-.caja1{
+
+.primera{
     flex-direction: row;
 }
-.caja2{
+
+.segunda {
     flex-direction: row;
 }
