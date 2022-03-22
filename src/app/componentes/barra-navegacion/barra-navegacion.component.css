@@ -1,7 +1,9 @@
 
-.navegacion{
+.barra{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: darkcyan;
+    background-color: darkcyan;
+    height: 75px;
+    
 }
 
 .logo{
@@ -19,4 +21,11 @@
 
 .login{
     float:right
+}
+
+.navegacion{
+    color: bisque;
+    text-align: center;
+
+
 }
