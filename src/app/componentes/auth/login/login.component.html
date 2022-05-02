@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+      <div class="row mb-3">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+              <input type="text" placeholder="Ingrese su email" name="email" formControlName="email" class="form-control" 
+              [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched }"
+              required>
+
+              <div *ngIf="Email?.errors && Email?.touched">
+                  <span *ngIf="Email?.hasError('required')" class="text-danger">El email es requerido.</span>
+                  <span *ngIf="Email?.hasError('email')" class="text-danger">El email ingresado no respeta el formato esperado.</span>
+              </div>
+          </div>
+      </div>
+      <div class="row mb-3">
+          <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
+          <div class="col-sm-10">
+              <input type="password" placeholder="Ingrese su contraseña" name="password" formControlName="password" class="form-control" required>
+          </div>
+      </div>
+
+      <div *ngIf="loginError" class="text-danger">Las credenciales ingresadas no existen en nuestros registros.</div>
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary me-3">Iniciar sesión</button>
+      <button routerLink="/home" class="btn btn-primary">Cancelar</button>
+  </form>
+</div>
