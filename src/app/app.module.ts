@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ComponentesComponent } from './componentes/componentes.component';
-import { EstudiosRealizadosComponent } from './componentes/estudios-realizados/estudios-realizados.component'
+import { EstudiosComponent } from './componentes/estudios/estudios.component'
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { BarraNavegacionComponent } from './componentes/barra-navegacion/barra-navegacion.component';
@@ -12,12 +12,13 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { LoginComponent } from './componentes/auth/login/login.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
- declarations: [AppComponent, ComponentesComponent, EstudiosRealizadosComponent, ExperienciaComponent, 
+ declarations: [AppComponent, ComponentesComponent, EstudiosComponent, ExperienciaComponent, 
     HabilidadesComponent, BarraNavegacionComponent, SobreMiComponent, ProyectosComponent,
         LoginComponent, PortfolioComponent],
   imports: [

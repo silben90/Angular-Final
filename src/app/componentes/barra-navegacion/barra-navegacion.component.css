@@ -10,47 +10,52 @@
     float:left
 }
 .mail{
-    float:right
-}
+    float:right;
+    padding-left: 5px;
+    }
 .github{
-    float:right
+    float:right;
+    padding-left: 5px;
 }
 .linkedin{
-    float:right
+    float:right;
+    padding-left: 5px;
+   
 }
 
 .login{
-    float:right
-}
+    float:right;
+    padding-left: 10px;
+    }
 
 .navegacion{
     text-align: center;
 }
 
 #inicio{
-    color:rgb(196, 202, 255);
+    color:rgb(128, 192, 26);
 }
 
 #sobre{
-    color:rgb(196, 202, 255);
+    color:rgb(128, 192, 26);
     padding-left: 10px;
 }
 
 #estudios{
-    color:rgb(196, 202, 255);
+    color:rgb(128, 192, 26);
     padding-left: 10px;
 }
 #experiencia{
-    color:rgb(196, 202, 255);
+    color:rgb(128, 192, 26);
     padding-left: 10px;
 }
 
 #habilidades{
-    color:rgb(196, 202, 255);
+    color:rgb(128, 192, 26);
     padding-left: 10px;
 }
 
 #proyectos{
-    color:rgb(196, 202, 255);
+    color:rgb(128, 192, 26);
     padding-left: 10px;
 }
