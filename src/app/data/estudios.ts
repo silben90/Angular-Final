@@ -1,4 +1,4 @@
-export interface estudios{
+export interface Estudios{
     id: number,
     school: string,
     title: string,

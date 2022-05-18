@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { config } from '../data/config/config.component';
+import { config } from '../data/config/config';
 import { LoginDto } from '../data/LoginDto';
 
 @Injectable({
