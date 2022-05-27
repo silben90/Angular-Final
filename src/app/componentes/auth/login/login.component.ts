@@ -8,6 +8,8 @@ import { AuthService } from 'src/app/servicios/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
 export class LoginComponent implements OnInit {
   usuario: string = "";
   password: string = "";
@@ -51,5 +53,5 @@ export class LoginComponent implements OnInit {
   get Password() {
     return this.form.get('password');
   }
-
+  
 }
