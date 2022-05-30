@@ -21,9 +21,10 @@ export class ExperienciaComponent implements OnInit {
     private formBuilder: FormBuilder) {
       this.experienciaForm = this.formBuilder.group({
           id: [''],
-          school: ['', [Validators.required]],
-          title: ['', [Validators.required]],
-          img: ['', [Validators.required]],
+          empresa: ['', [Validators.required]],
+          descripcion: ['', [Validators.required]],
+          inicio: ['', [Validators.required]],
+          fin:['', [Validators.required]],
         });
    }
 
@@ -44,9 +45,10 @@ export class ExperienciaComponent implements OnInit {
   private clearForm() {
     this.experienciaForm.setValue({
       id: '',
-      school: '',
-      title: '',
-      img: ''
+      empresa: '',
+      descripcion: '',
+      inicio: '',
+      fin:''
     })
   }
 

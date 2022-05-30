@@ -1,4 +1,6 @@
 
+ 
+ 
  .habilidades{
     background-color: rgb(154, 180, 111);
     border-width: 1px;
@@ -8,7 +10,8 @@
     align-items: center;
     padding-left: 3%;
     margin-top: 5px;
-   
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
     }
     .blandas{
        flex-direction: column;

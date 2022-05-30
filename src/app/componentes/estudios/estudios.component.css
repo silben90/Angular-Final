@@ -1,4 +1,4 @@
-.estudios{
+#educacion{
     background-color: rgb(154, 180, 111);
     border-width: 1px;
     border-style:solid; 
@@ -8,17 +8,11 @@
     padding-left: 3%;
     line-height: 50px;
     vertical-align: middle;
-  
+
+    
 }
 
-.primera{
-    flex-direction: row;
-    display: flex;
+.list-info{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.segunda {
-    margin-top: 10px;
-    flex-direction: row;
-    display: flex;
-    margin-bottom: 5px;
-}

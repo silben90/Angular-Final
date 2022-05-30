@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExperienciaComponent } from './experiencia.component';
 
-describe('ExperienciaComponent', () => {
+describe('ExperienciasRealizadosComponent', () => {
   let component: ExperienciaComponent;
   let fixture: ComponentFixture<ExperienciaComponent>;
 

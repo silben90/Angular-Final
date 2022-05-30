@@ -1,10 +1,93 @@
-<section class="experiencia" >
-    <h3>Experiencia</h3>
-    <div class="caja">
-        <div><strong>Las Tintas, Neuquén</strong> 2006-2007; <i>moza</i></div>
-        <div><strong>Kiosco Facultad de ingenieria UNCOma</strong> 2009-2014; <i>atención al público</i></div>
-        <div><strong>Independiente</strong> 2007-2018; <i>Liquidación rentas Neuquén a PyMEs</i></div>
-        <div><strong>Independiente</strong> 2018-; <i>Producción y venta plantas</i></div>
+<section class ="est">
+<div id= "experiencia">
+    <!-- Modal -->
+    <div id=estilo class="modal fade" id="experienciaForm" tabindex="-1" aria-labelledby="experienciaFormLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="experienciaFormLabel">Experiencia</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()">
+              <input type="hidden" name="id" formControlName="id">
+  
+              <div class="row mb-1">
+                <label for="empresa" class="col-sm-0 col-form-label">Empresa</label>
+                <div class="col-sm-0">
+                  <input type="text" name="empresa" formControlName="empresa" class="form-control" required>
+                  
+                </div>
+              </div>
+  
+              <div class="row mb-0">
+                <label for="descripcion" class="col-sm-0 col-form-label">Descripción</label>
+                <div class="col-sm-0">
+                  <input type="text" name="title" formControlName="descripcion" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row mb-0">
+                <label for="inicio" class="col-sm-0 col-form-label">Fecha Inicio </label>
+                <div class="col-sm-0">
+                  <input type="text" name="inicio" formControlName="inicio" class="form-control" required>
+                </div>
+              </div>
+               
+              <div class="row mb-0">
+                <label for="fin" class="col-sm-0 col-form-label">Fecha Fin </label>
+                <div class="col-sm-0">
+                  <input type="text" name="fin" formControlName="fin" class="form-control" required>
+                </div>
+              </div>
+               
+              <div class="text-center">
+                <button type="button" class="btn btn-secondary me-1" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-        
+  
+  
+  
+    <div class="card-titles">
+      <h2>Experiencia</h2>
+      <div *ngIf="isUserLogged" class="btn-edit">
+        <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onNuevaExperiencia()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-plus-lg" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+        </svg></button>
+      </div>
+    </div>
+    <div>
+      <ul class="items-list" id="eduList">
+        <li *ngFor="let experiencia of experienciaList; let i = index">        
+              <div class="list-info">
+                <div>
+                  <h3 id="edu-empresa">{{ experiencia.empresa }} </h3>
+                  <p><span id="edu-descripcion">{{ experiencia.descripcion }}</span></p>
+                  <p><time id="edu-inicio">{{ experiencia.inicio }}</time> - <time id="edu-fin">{{ experiencia.fin }}</time></p>
+                </div>
+
+          </div>
+          <div *ngIf="isUserLogged" class="data-control">
+            <div class="btn-edit">
+              <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onEditarExperiencia(i)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-pencil" viewBox="0 0 16 16">
+                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+              </svg></button>
+            </div>
+            <div class="btn-edit">
+              <button class="btn btn-right" (click)="onBorrarExperiencia(i)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-trash" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg>
+                </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>

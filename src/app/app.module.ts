@@ -14,7 +14,9 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
 import { AppRoutingModule } from './app-routing.module';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { PortfolioService } from './servicios/portfolio.service';
+import { InterceptorService } from './servicios/interceptor.service';
 
 
 @NgModule({
@@ -28,7 +30,11 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+
+  providers: [PortfolioService,
+  {provide:HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}
+],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

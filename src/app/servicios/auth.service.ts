@@ -27,6 +27,10 @@ currentUserSubject: BehaviorSubject<any> | undefined;
     );
   }
 
+  get UsuarioAutenticado () {
+    return this.currentUserSubject?.value;
+  }
+
   public logout() {
     sessionStorage.removeItem("email");
   }

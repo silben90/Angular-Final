@@ -5,9 +5,12 @@
     </div>
 
     <div class="login">
-      <form (submit)="onLogin()">
+      <form (submit)="onLogin()" *ngIf="!isUserLogged">
+
         <input type="submit" value="Login" style="background-color: rgb(128, 192, 26)"/>
       </form>
+      <a href="../portfolio/"> <button (click)="onLogout()" *ngIf="isUserLogged" style="background-color:rgb(125, 168, 168)" >Salir</button></a>
+     
     </div> 
 
      <div class="mail">

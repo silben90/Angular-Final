@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/auth/login/login.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { EstudiosComponent } from './componentes/estudios/estudios.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
@@ -12,6 +12,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 
 const routes: Routes= [
   {path: 'portfolio', component: PortfolioComponent},
+  {path: 'home', component: PortfolioComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sobre_mi', component: SobreMiComponent},
   {path: 'estudios', component: EstudiosComponent},
@@ -25,7 +26,7 @@ const routes: Routes= [
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)]
+  imports: [CommonModule, RouterModule.forRoot(routes), FormsModule]
 })
 export class AppRoutingModule { 
   form:FormGroup;
@@ -33,8 +34,8 @@ export class AppRoutingModule {
     this.form=this.formbuilder.group(
       {
         email:['',[Validators.required, Validators.email ]],
-        password:['', [Validators.required, Validators.minLength(8)]],
-        /*falta terminar de cargar el resto de datos que espera, sacado de postman*/
+        password:['', [Validators.required, Validators.minLength(6)]],
+
       }
     )
   }

@@ -1,4 +1,4 @@
-.experiencia{
+#experiencia{
     background-color: rgb(154, 180, 111);
     border-width: 1px;
     border-style:solid; 
@@ -7,8 +7,11 @@
     align-items: center;
     padding-left: 3%;
     margin-top: 5px;
+    line-height: 30px;
+    vertical-align: middle;
+}
 
- }
- .caja{
-     flex-direction: row;
- }
+.list-info{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
