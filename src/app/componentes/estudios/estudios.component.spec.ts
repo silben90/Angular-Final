@@ -1,7 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { EstudiosComponent } from './estudios.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
-describe('EstudiosRealizadosComponent', () => {
+
+describe('EstudiosComponent', () => {
   let component: EstudiosComponent;
   let fixture: ComponentFixture<EstudiosComponent>;
 

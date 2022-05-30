@@ -3,7 +3,6 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Estudios } from "../data/estudios";
 import {Experiencia} from "../data/experiencia";
-import { map } from "rxjs";
 import { config } from "../data/config/config";
 
 @Injectable ({

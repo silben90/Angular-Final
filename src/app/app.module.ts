@@ -7,7 +7,7 @@ import { EstudiosComponent } from './componentes/estudios/estudios.component'
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { BarraNavegacionComponent } from './componentes/barra-navegacion/barra-navegacion.component';
-import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
+import { SobreComponent } from './componentes/sobre/sobre.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { LoginComponent } from './componentes/auth/login/login.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
@@ -21,7 +21,7 @@ import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
  declarations: [AppComponent, ComponentesComponent, EstudiosComponent, ExperienciaComponent, 
-    HabilidadesComponent, BarraNavegacionComponent, SobreMiComponent, ProyectosComponent,
+    HabilidadesComponent, BarraNavegacionComponent, SobreComponent, ProyectosComponent,
         LoginComponent, PortfolioComponent],
   imports: [
     BrowserModule,

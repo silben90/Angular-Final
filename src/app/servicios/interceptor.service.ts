@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpEvent, HttpHandler, HttpRequest, HttpInterceptor } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { AuthService } from "./auth.service";
+import { TestBed } from "@angular/core/testing";
 
 @Injectable({
     providedIn: 'root' })

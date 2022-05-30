@@ -72,13 +72,13 @@
         <li *ngFor="let estudios of estudiosList; let i = index">
           <div class="data-container">
 
-              <div class="list-info">
-                  <h3 id="edu-school">{{ estudios.ente }} </h3>
-                  <p><span id="edu-title">{{ estudios.titulo }}</span></p>
-                  <p><time id="edu-start">{{ estudios.inicio }}</time> - <time id="edu-end">{{ estudios.fin }}</time></p>
-                  <div class="logo-image-container"><img id="edu-img" class="logo-image"
-                    src="/assets/png/{{estudios.img}}"></div>
-                </div>
+            <div class="list-info">
+              <h3 id="edu-school">{{ estudios.ente }} </h3>
+              <p><span id="edu-title">{{ estudios.titulo }}</span></p>
+              <p><time id="edu-start">{{ estudios.inicio }}</time> - <time id="edu-end">{{ estudios.fin }}</time></p>
+              <img id="edu-img" class="logo-image"
+                src="/assets/png/{{estudios.img}}" height="50px" width="70px">
+            </div>
             
           </div>
           <div *ngIf="isUserLogged" class="data-control">
